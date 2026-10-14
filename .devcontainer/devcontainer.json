@@ -1,0 +1,41 @@
+{
+  "name": "CampusDB MySQL Lab",
+  "build": { "dockerfile": "Dockerfile" },
+
+  // 2 cores is plenty for MySQL with a few thousand rows and doubles the free hours.
+  "hostRequirements": { "cpus": 2 },
+
+  // Runs once, when the codespace is first created: sets the lab root password.
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  // Runs every time the codespace starts or wakes up: starts MySQL.
+  "postStartCommand": "bash .devcontainer/post-start.sh",
+
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "sqltools.connections": [
+          {
+            "name": "CampusDB (root)",
+            "driver": "MySQL",
+            "server": "127.0.0.1",
+            "port": 3306,
+            "username": "root",
+            "askForPassword": true,
+            "database": "mysql"
+          }
+        ]
+      }
+    },
+    "codespaces": {
+      "openFiles": ["labs/00-getting-started.md"]
+    }
+  }
+}
