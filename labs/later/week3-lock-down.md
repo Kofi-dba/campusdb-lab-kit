@@ -1,5 +1,10 @@
 # Lab 3 — Lock down CampusDB: users, roles and views
 
+> 🚧 **Draft for week 3 — not part of the week 1–2 labs.** It will be renumbered
+> (labs 11+) before week 3. Use `labctl start-week 3` to prepare your server; ignore
+> the `labctl check` lines until your lecturer updates this sheet.
+
+
 **Goal:** stop using the master key. Create one account per person, give each
 account exactly the access their job needs through roles, and prove that
 everything else is refused.

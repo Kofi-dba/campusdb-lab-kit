@@ -1,5 +1,10 @@
 # Lab 4 — Defend CampusDB: injection, encryption and auditing
 
+> 🚧 **Draft for week 4 — not part of the week 1–2 labs.** It will be renumbered
+> (labs 11+) before week 4. Use `labctl start-week 4` to prepare your server; ignore
+> the `labctl check` lines until your lecturer updates this sheet.
+
+
 **Goal:** see SQL injection succeed and fail with your own eyes, force every
 connection to be encrypted, record who changed fee records, encrypt your backups,
 and harden the server.
